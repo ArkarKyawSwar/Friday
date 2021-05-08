@@ -1,0 +1,54 @@
+Below is the list of things Friday can help the user with.
+-Retrieve schedules from Google Calendar(one day at a time)
+-Open a new Notepad and write down what the user says for short notes.
+-Control Spotify(details at the end of this text).
+
+To wake up Friday, just say "Friday". 
+**  Friday must be woke up after each command.
+
+To run main.py, the user must have following files in the same directory.
+-A JSON file named "credentials.json" which contains the user's credentials of Google Calendar. See below. 
+    {"installed":{"client_id":"XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.apps.googleusercontent.com",
+                    "project_id":"friday-1001",
+                    "auth_uri":"https://accounts.google.com/o/oauth2/auth",
+                    "token_uri":"https://oauth2.googleapis.com/token",
+                    "auth_provider_x509_cert_url":"https://www.googleapis.com/oauth2/v1/certs",
+                    "client_secret":"XXXXXXXXXXXXXXXXXXXXXXXXX",
+                    "redirect_uris":["urn:ietf:wg:oauth:2.0:oob","http://localhost"]}}
+-A JSON file named "token.json" which contains the token for Google Calender access. 
+ This file is created automatically when the authorization flow completes for the first time. See below.
+    {"token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", 
+    "refresh_token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX", 
+    "token_uri": "https://oauth2.googleapis.com/token", 
+    "client_id": "XXXXXXXXXXXXXXXXXXXXXXXXX", 
+    "client_secret": "XXXXXXXXXXXXXXXXXXXXXXXXX", 
+    "scopes": ["https://www.googleapis.com/auth/calendar.readonly"], 
+    "expiry": "YYYY-MM-DDT18:17:59.499166Z"}
+-A JSON file named "spotifycredentials.json" which contains the user's credentials of the spotify account. See below.
+    {
+    "client_id" : "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "client_secret" : "XXXXXXXXXXXXXXXXXXXXXXXXX",
+    "device_name" : "DESKTOP-XXXXXXX",
+    "redirect_uri" : "https://www.google.com/",
+    "username" : "XXXXXXXXXXXXXXXXXXXX",
+    "scope" : "user-read-private user-read-playback-state user-modify-playback-state"
+    }
+
+
+--------Guide for Spotify--------
+- Friday can play songs from Spotify by three voice commands. In other words, the user can give either a certain 
+    track's name, album's name or artist's name. If there are multiple albums or tracks with the same name, Friday
+    will pick the first one it finds. Voice commands are as follows.
+    -To play by track name -> Say "Spotify track <track name>"
+    -To play by album name -> Say "Spotify album <album name>"
+    -To play by artist name -> Say "Spotify artist <artist name>"
+
+- Friday can control Spotify with four commands.
+    -To pause -> Say "Spotify pause"
+    -To resume -> Say "Spotify play"
+    -To skip -> Say "Spotify next"
+    -To go back one track -> Say "Spotify previous"
+
+*** Once Friday recieves the first Spotify command, it will only expect more Spotify commands so the user cannot 
+    access other services such as Google Calendar and Notepad. To get out of this, the user can say "Spotify quit".
+    This will bring Friday back to normal state. 
