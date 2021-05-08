@@ -3,7 +3,7 @@ Below is the list of things Friday can help the user with.
 -Open a new Notepad and write down what the user says for short notes.
 -Control Spotify(details at the end of this text).
 
-To wake up Friday, just say "Friday". 
+To wake up Friday, just say "Hey, Friday". 
 **  Friday must be woke up after each command.
 
 To run main.py, the user must have following files in the same directory.
