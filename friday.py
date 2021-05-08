@@ -24,7 +24,7 @@ class InvalidSearchError(Exception):
     pass
 
 
-WAKE_UP = "friday"
+WAKE_UP = "hey, friday"
 
 OPEN_CALENDAR = ["calendar", "do i have", "am i busy", "am i free", "do i have plans", "show me my plans", "how's my schedule", "what's my schedule"]
 MONTHS = ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"]
